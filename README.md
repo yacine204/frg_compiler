@@ -4,6 +4,10 @@ A mini compiler for the FROG programming language (`.frg`), written in C with a 
 
 For full language rules, overview, and code examples, see `plan.txt`.
 
+## Demo
+
+![demo.png](assets/demo.png)
+
 ---
 
 ## How to Run
@@ -17,8 +21,7 @@ sudo apt install gcc libgtk-3-dev pkg-config
 ```
 
 ```bash
-gcc -o frog_compiler main.c src/*.c $(pkg-config --cflags --libs gtk+-3.0)
-./frog_compiler
+gcc -o frog_compiler main.c src/*.c compiler/*.c -I. -Iinclude \$(pkg-config --cflags --libs gtk+-3.0)
 ```
 
 ### Windows
